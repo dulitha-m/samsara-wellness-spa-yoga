@@ -1,0 +1,199 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 24px 0;
+  transition: all 0.5s ease;
+}
+
+.navbar--scrolled {
+  background: rgba(250, 246, 239, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px 0;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Logo */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.navbar__logo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.navbar__logo:hover .navbar__logo-icon {
+  background: var(--gold);
+  color: white;
+}
+
+.navbar__logo-name {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1;
+}
+.navbar--scrolled .navbar__logo-name { color: var(--text-dark); }
+.navbar:not(.navbar--scrolled) .navbar__logo-name { color: var(--white); }
+.navbar--home:not(.navbar--scrolled) .navbar__logo-name { color: var(--text-dark); }
+
+.navbar__logo-sub {
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Desktop links */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  transition: var(--transition);
+  color: var(--white);
+}
+.navbar--scrolled .navbar__link { color: var(--text-dark); }
+.navbar--home:not(.navbar--scrolled) .navbar__link { color: var(--text-dark); }
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+.navbar__link:hover { color: var(--gold); }
+.navbar__link:hover::after { width: 100%; }
+
+/* CTA Button */
+.navbar__cta {
+  display: block;
+  padding: 10px 28px;
+  background: var(--gold);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 2px solid var(--gold);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.navbar__cta:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+/* Hamburger */
+.navbar__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+}
+.navbar--scrolled .navbar__hamburger { color: var(--text-dark); }
+.navbar--home:not(.navbar--scrolled) .navbar__hamburger { color: var(--text-dark); }
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mobile-menu__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-menu__icon {
+  color: var(--gold);
+  margin-bottom: -16px;
+}
+
+.mobile-menu__brand {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 6px;
+}
+
+.mobile-menu__links {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-menu__link {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.3s ease;
+  font-style: italic;
+}
+.mobile-menu__link:hover { color: var(--gold); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar__links { display: none; }
+  .navbar__cta { display: none; }
+  .navbar__hamburger { display: flex; }
+}

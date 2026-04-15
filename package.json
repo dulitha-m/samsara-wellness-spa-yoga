@@ -1,9 +1,13 @@
 {
   "name": "samsara-wellness-spa",
   "version": "1.0.0",
+  "workspaces": [
+    "client"
+  ],
   "scripts": {
-    "dev": "cd client && npm run dev",
-    "build": "cd client && npm run build",
-    "preview": "cd client && npm run preview"
+    "dev": "npm run dev -w client",
+    "build": "npm run build -w client",
+    "preview": "npm run preview -w client"
   }
 }
+

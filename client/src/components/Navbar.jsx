@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import LogoIcon from './icons/LogoIcon';
 import './Navbar.css';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -45,7 +46,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="navbar__logo">
             <div className="navbar__logo-icon">
-              <Leaf size={18} />
+              <LogoIcon size={24} />
             </div>
             <div>
               <div className="navbar__logo-name">SAMSARA</div>
@@ -86,7 +87,7 @@ const Navbar = () => {
               <X size={28} />
             </button>
             <div className="mobile-menu__icon">
-              <Leaf size={32} />
+              <LogoIcon size={48} />
             </div>
             <motion.p 
               className="mobile-menu__brand"

@@ -82,6 +82,7 @@
   height: 100%;
   object-fit: cover;
   animation: zoomSlow 25s infinite alternate ease-in-out;
+  filter: brightness(0.9) contrast(1.1);
 }
 
 @keyframes zoomSlow {
@@ -110,10 +111,17 @@
   color: var(--text-dark);
 }
 
+.hero__title span {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
 .hero__title em {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   color: var(--gold);
+  font-style: italic;
 }
 
 .hero__subtitle {
@@ -139,6 +147,18 @@
   background: var(--text-dark);
   color: var(--white);
 }
+
+/* ===== DECORATIONS ===== */
+.floating-decor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.decor-1 { top: 10%; left: 5%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(197, 168, 128, 0.15) 0%, transparent 70%); }
+.decor-2 { bottom: 10%; right: 5%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(197, 168, 128, 0.1) 0%, transparent 70%); }
+
 
 /* ===== INFO STRIP ===== */
 .info-strip {
@@ -599,134 +619,178 @@
 
 /* ===== AMBIANCE GALLERY (BENTO GRID) ===== */
 .ambiance {
-  padding: 100px 0;
+  padding: 120px 0;
   background: var(--dark-2);
+  position: relative;
+  overflow: hidden;
 }
 
 .ambiance__header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .ambiance__header .section-title {
   color: var(--white);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
+
 
 .ambiance__bento {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
-  grid-auto-rows: 280px;
+  gap: 20px;
+  grid-auto-rows: 300px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .ambiance__bento {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 350px);
-    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 400px);
+    gap: 30px;
   }
 }
 
 .bento-item {
   position: relative;
-  border-radius: var(--radius-md);
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
 
-.bento-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-gold);
+.bento-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 10;
 }
 
-.bento-large {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-@media (min-width: 768px) {
-  .bento-large {
-    grid-column: span 2;
-  }
-}
-
-.bento-wide {
-  grid-column: span 1;
-}
-@media (min-width: 768px) {
-  .bento-wide {
-    grid-column: span 2;
-  }
+.bento-item.revealed::after {
+  transform: scaleX(1);
 }
 
 .bento-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s ease;
+  transition: scale 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  filter: grayscale(0.2) brightness(0.8);
 }
 
 .bento-item:hover img {
-  transform: scale(1.08);
+  scale: 1.1;
+  filter: grayscale(0) brightness(1);
+}
+
+.bento-large {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+@media (min-width: 900px) {
+  .bento-large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+.bento-wide {
+  grid-column: span 1;
+}
+
+@media (min-width: 900px) {
+  .bento-wide {
+    grid-column: span 2;
+  }
 }
 
 .bento-overlay {
   position: absolute;
   inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 60%);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  color: var(--white);
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  opacity: 0;
   transition: var(--transition);
-  text-align: center;
-  background: rgba(18, 17, 16, 0.0);
+  z-index: 5;
 }
 
 .bento-item:hover .bento-overlay {
-  background: rgba(18, 17, 16, 0.4);
-  backdrop-filter: blur(4px);
-}
-
-.bento-overlay h4 {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: var(--transition);
-}
-
-.bento-item:hover .bento-overlay h4 {
-  transform: translateY(0);
   opacity: 1;
 }
 
+.bento-overlay h4 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--white);
+  transform: translateY(20px);
+  transition: var(--transition);
+}
+
+.bento-overlay p {
+  color: var(--gold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  transform: translateY(20px);
+  transition: var(--transition);
+  transition-delay: 0.1s;
+}
+
+.bento-item:hover h4, 
+.bento-item:hover p {
+  transform: translateY(0);
+}
+
+/* ===== REVEAL ANIMATION UTILITY ===== */
+.reveal-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  z-index: 2;
+  transform: translateX(-100%);
+}
 
 /* ===== CTA BANNER ===== */
 .cta-banner {
   position: relative;
-  padding: 120px 0;
+  padding: 160px 0;
   text-align: center;
   color: var(--white);
+  overflow: hidden;
 }
 
 .cta-banner__bg {
   position: absolute;
   inset: 0;
   z-index: -1;
+  transform: scale(1.1);
 }
 
 .cta-banner__img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .cta-banner__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(15, 15, 15, 0.85);
+  background: linear-gradient(to bottom, rgba(18,17,16,0.9), rgba(18,17,16,0.7));
 }
 
 .cta-banner__content {
@@ -737,20 +801,29 @@
 .cta-banner__eyebrow {
   color: var(--gold);
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
+  font-size: 0.8rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .cta-banner__title {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   margin-bottom: 24px;
 }
 
 .cta-banner__subtitle {
   color: rgba(255,255,255,0.7);
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto 40px;
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 48px;
   line-height: 1.8;
+  font-family: var(--font-serif);
 }
+
+@media (max-width: 768px) {
+  .hero__title { font-size: 3.5rem; }
+  .about { padding: 80px 0; }
+  .services-preview, .heritage, .testimonials, .ambiance { padding: 80px 0; }
+}
+

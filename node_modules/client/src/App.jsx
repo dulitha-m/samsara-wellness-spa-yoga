@@ -8,6 +8,9 @@ import Services from './pages/Services';
 import Yoga from './pages/Yoga';
 import Heritage from './pages/Heritage';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
+import Reviews from './pages/Reviews';
+import Blog from './pages/Blog';
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/yoga" element={<Yoga />} />
             <Route path="/heritage" element={<Heritage />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

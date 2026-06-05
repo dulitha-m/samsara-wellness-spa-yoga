@@ -49,6 +49,9 @@ const Footer = () => {
             <li><Link to="/services">Spa Services</Link></li>
             <li><Link to="/yoga">Yoga Classes</Link></li>
             <li><Link to="/heritage">Our Heritage</Link></li>
+            <li><Link to="/gallery">Gallery</Link></li>
+            <li><Link to="/reviews">Reviews</Link></li>
+            <li><Link to="/blog">Blog Journal</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
@@ -57,9 +60,9 @@ const Footer = () => {
           <h3 className="footer__heading">Our Services</h3>
           <ul className="footer__links">
             <li><Link to="/services">Traditional Thai Massage</Link></li>
-            <li><Link to="/services">Aromatherapy</Link></li>
-            <li><Link to="/services">Hot Stone Healing</Link></li>
-            <li><Link to="/services">Body Scrubs & Wraps</Link></li>
+            <li><Link to="/services">Full Body Scrubs</Link></li>
+            <li><Link to="/services">Foot Reflexology</Link></li>
+            <li><Link to="/services">Ayurvedic Healing</Link></li>
             <li><Link to="/yoga">Vinyasa & Hatha Yoga</Link></li>
           </ul>
         </div>
@@ -69,15 +72,15 @@ const Footer = () => {
           <ul className="footer__contact">
             <li>
               <MapPin size={18} className="footer__contact-icon" />
-              <span>Grand Oriental Hotel, No 02, York Street, Colombo 01.</span>
+              <span>4th Floor, Grand Oriental Hotel, No 02, York Street, Colombo 01, Sri Lanka.</span>
             </li>
             <li>
               <Phone size={18} className="footer__contact-icon" />
-              <span>+94 114 846 719</span>
+              <span>+94 112 320 320 / +94 75 148 8639</span>
             </li>
             <li>
               <Mail size={18} className="footer__contact-icon" />
-              <span>info@samsarawellness.com</span>
+              <span>info@samsarawellnessint.com</span>
             </li>
           </ul>
         </div>

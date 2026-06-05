@@ -32,7 +32,7 @@ const Heritage = () => {
               The Grand Oriental Hotel has stood as a beacon of luxury in Colombo for over a century. Walking through its halls is a journey back in time, characterized by elegant colonial architecture, rich teakwood detailing, and narratives of travelers from across the globe.
             </p>
             <p>
-              Samsara Wellness Spa & Yoga was born from a desire to infuse this historic landmark with the timeless healing traditions of the East. We have respectfully restored a wing of the hotel, transforming it into an oasis of calm amidst the bustling city. 
+              Samsara Wellness Spa & Yoga was born from a desire to infuse this historic landmark with the timeless healing traditions of the East. Officially opened in August 2022, we operate as a Tourist Board Approved wellness centre on the hotel's 4th floor, offering a strictly professional, safe, and calming environment for both international tourists and local residents.
             </p>
           </motion.div>
           <motion.div className="heritage-story__img"
@@ -57,7 +57,7 @@ const Heritage = () => {
               {[
                 { year: '1837', title: 'The Foundation', text: 'Originally serving as barracks for soldiers, the site was later converted to the Grand Oriental Hotel to welcome global dignitaries.' },
                 { year: '1875', title: 'Golden Age of Travel', text: 'The hotel became the epitome of luxury, frequently visited by royalty and writers capturing the Ceylon essence.' },
-                { year: '2020', title: 'The Rebirth', text: 'Samsara establishes its sanctuary within the walls, bridging century-old Sri Lankan heritage with Southeast Asian wellness.' },
+                { year: '2022', title: 'The Rebirth', text: 'Samsara Wellness officially launches on the 4th floor as a Tourist Board Approved Wellness Centre, bridging century-old Colombo heritage with professional Southeast Asian therapies.' },
               ].map((item, i) => (
                 <motion.div
                   key={i}

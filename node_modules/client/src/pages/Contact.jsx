@@ -40,28 +40,28 @@ const Contact = () => {
                   <div className="contact-icon"><MapPin size={24} /></div>
                   <div>
                     <h4>Location</h4>
-                    <p>Grand Oriental Hotel,<br />No 02, York Street, Colombo 01.</p>
+                    <p>4th Floor, Grand Oriental Hotel,<br />No 02, York Street, Colombo 01, Sri Lanka.</p>
                   </div>
                 </li>
                 <li>
                   <div className="contact-icon"><Phone size={24} /></div>
                   <div>
                     <h4>Reservations & Inquiries</h4>
-                    <p>+94 11 232 0321</p>
+                    <p>+94 112 320 320 / +94 75 148 8639</p>
                   </div>
                 </li>
                 <li>
                   <div className="contact-icon"><Mail size={24} /></div>
                   <div>
                     <h4>Email</h4>
-                    <p>info@samsarawellness.com</p>
+                    <p>info@samsarawellnessint.com</p>
                   </div>
                 </li>
                 <li>
                   <div className="contact-icon"><Clock size={24} /></div>
                   <div>
                     <h4>Opening Hours</h4>
-                    <p>Everyday from 9:30 AM to 2:00 AM</p>
+                    <p>Everyday from 9:30 AM to 12:00 Midnight</p>
                   </div>
                 </li>
               </ul>
@@ -81,7 +81,7 @@ const Contact = () => {
                   <a href="https://wa.me/94751488639" target="_blank" rel="noopener noreferrer" className="btn-gold concierge-btn">
                     WhatsApp Us
                   </a>
-                  <a href="tel:+94112320321" className="btn-outline concierge-btn dark-outline">
+                  <a href="tel:+94112320320" className="btn-outline concierge-btn dark-outline">
                     Call Reservations
                   </a>
                   <a href="https://www.google.com/maps/place/Grand+Oriental+Hotel/@6.9374149,79.8449377,17z/data=!3m1!4b1!4m9!3m8!1s0x3ae25920c53a5e23:0x56efc3724db4f567!5m2!4m1!1i2!8m2!3d6.9374149!4d79.8449377!16s%2Fg%2F11cp7jjvdv?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="concierge-map-link">

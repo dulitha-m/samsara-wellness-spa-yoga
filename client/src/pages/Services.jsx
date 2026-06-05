@@ -13,9 +13,9 @@ const Services = () => {
       img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1000&auto=format&fit=crop",
       items: [
         { name: "Traditional Thai Massage", duration: "60/90/120 min", desc: "Our signature pressure-point massage and assisted yoga stretching to improve flexibility and flow." },
-        { name: "Aromatherapy Oil Massage", duration: "60/90 min", desc: "A relaxing massage using premium essential oils tailored to your mood to induce deep relaxation." },
-        { name: "Deep Tissue & Sports", duration: "60/90 min", desc: "Deep pressure to release chronic muscle tension, knots, and sports-related aches." },
-        { name: "Foot Reflexology", duration: "45 min", desc: "Targeted pressure point therapy on the feet to stimulate wellness in corresponding body organs." }
+        { name: "Traditional Thai Massage (Body to Body)", duration: "60/90/120 min", desc: "Specialized therapeutic massage utilizing full body contact techniques to release deep muscular tension." },
+        { name: "Full Body Massage", duration: "60/90 min", desc: "Muscle relaxation treatments using premium aromatherapy oils and customized pressure." },
+        { name: "Foot Reflexology", duration: "45/60 min", desc: "Targeted pressure point therapy on the feet to stimulate wellness in corresponding body organs." }
       ]
     },
     {
@@ -23,9 +23,9 @@ const Services = () => {
       desc: "Revitalize your skin with organic ingredients and ancient secrets. Our body scrubs and wraps nourish deeply.",
       img: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1000&auto=format&fit=crop",
       items: [
-        { name: "Jasmine Rice Body Scrub", duration: "45 min", desc: "Gently exfoliates and softens skin using traditional Thai rice grains and botanical extracts." },
-        { name: "Detoxifying Clay Wrap", duration: "60 min", desc: "Deeply cleanses and hydrates the body using mineral-rich clay to draw out impurities." },
-        { name: "Samsara Glow Facial", duration: "60 min", desc: "A brightening, restorative facial using herbal extracts and lymphatic drainage massage." }
+        { name: "Full Body Scrub & Exfoliation", duration: "45 min", desc: "Gently exfoliates and softens skin using fresh herbal ingredients and traditional Thai rice grains." },
+        { name: "Head & Shoulder Massage", duration: "45 min", desc: "Express stress-relieving massage focusing on upper-body tension, neck, and scalp." },
+        { name: "Ayurvedic Herbal Healing", duration: "60/90 min", desc: "A holistic warm oil massage based on traditional Sri Lankan herbals and botanical extracts." }
       ]
     },
     {

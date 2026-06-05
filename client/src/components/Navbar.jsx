@@ -22,6 +22,9 @@ const Navbar = () => {
     { name: 'Services', path: '/services' },
     { name: 'Yoga',     path: '/yoga' },
     { name: 'Heritage', path: '/heritage' },
+    { name: 'Gallery',  path: '/gallery' },
+    { name: 'Reviews',  path: '/reviews' },
+    { name: 'Blog',     path: '/blog' },
   ];
 
   // Logo variant logic:

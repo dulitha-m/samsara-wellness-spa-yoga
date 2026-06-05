@@ -63,10 +63,10 @@ const testimonials = [
 ];
 
 const stats = [
-  { num: '15+', label: 'Years of Heritage' },
-  { num: '8K+', label: 'Guests Served' },
-  { num: '12',  label: 'Signature Rituals' },
-  { num: '100%',label: 'Pure Ingredients' },
+  { num: 'Since 2022', label: 'Premium Holistic Healing' },
+  { num: '10K+', label: 'Guests Served' },
+  { num: 'Approved', label: 'Tourist Board Wellness Centre' },
+  { num: '100%', label: 'Strictly Professional' },
 ];
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -145,9 +145,9 @@ const Home = () => {
       >
         <div className="container info-strip__inner">
           {[
-            { icon: <Clock size={20} />, label: 'Opening Hours', value: '9:30 AM – 2:00 AM' },
+            { icon: <Clock size={20} />, label: 'Opening Hours', value: '9:30 AM – 12:00 Midnight' },
             { icon: <MapPin size={20} />, label: 'Location', value: 'Grand Oriental Hotel, Colombo 01' },
-            { icon: <Phone size={20} />, label: 'Call Us', value: '+94 114 846 719' },
+            { icon: <Phone size={20} />, label: 'Call Us', value: '+94 112 320 320 / +94 75 148 8639' },
           ].map((item, i) => (
             <React.Fragment key={i}>
               {i > 0 && <div className="info-strip__divider" />}
@@ -214,7 +214,7 @@ const Home = () => {
               Authentic Thai Healing<br />meets Colombo Heritage
             </h2>
             <p className="about__desc">
-              Located within the legendary Grand Oriental Hotel, Samsara is an oasis where century-old Thai wisdom meets modern sanctuary design. Our therapists are trained in traditional healing arts, using premium local ingredients like Ceylon cinnamon and tea to ensure every session restores harmony.
+              Located on the 4th floor of the legendary Grand Oriental Hotel, Samsara is a Tourist Board Approved Wellness Centre operating since August 2022. We offer a strictly professional, clean, and safe environment where authentic Thai and Ayurvedic therapies meet modern sanctuary design, using premium local ingredients to restore harmony.
             </p>
             <div className="about__features">
               <div className="about__feature">

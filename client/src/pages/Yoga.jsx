@@ -8,7 +8,7 @@ const Yoga = () => {
   const classes = [
     { title: "Vinyasa Flow", level: "All Levels", duration: "60 mins", time: "07:00 AM & 05:30 PM", desc: "A dynamic practice connecting breath with fluid movement to build strength and heat." },
     { title: "Gentle Hatha", level: "Beginner Friendly", duration: "75 mins", time: "09:00 AM", desc: "A slower-paced class focusing on alignment, holding postures, and deep breathing." },
-    { title: "Yin Yoga & Mediation", level: "All Levels", duration: "90 mins", time: "07:00 PM", desc: "Deep passive stretching held for longer periods, ending with guided mindfulness." },
+    { title: "Yin Yoga & Meditation", level: "All Levels", duration: "90 mins", time: "07:00 PM", desc: "Deep passive stretching held for longer periods, ending with guided mindfulness." },
     { title: "Sunrise Pranayama", level: "Intermediate", duration: "45 mins", time: "06:00 AM", desc: "Breathwork techniques to clear the mind and energize the subtle body for the day." }
   ];
 

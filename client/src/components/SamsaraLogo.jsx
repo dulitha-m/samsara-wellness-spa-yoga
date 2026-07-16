@@ -29,7 +29,7 @@ const SamsaraLogo = ({
         src="/samsara-logo.png"
         alt="Samsara Salons Wellness & Yoga"
         className="samsara-logo__img"
-        style={{ height: `${height}px`, width: 'auto', display: 'block' }}
+        style={{ height: 'var(--logo-height)', width: 'auto', display: 'block' }}
       />
     </div>
   );

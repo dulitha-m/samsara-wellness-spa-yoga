@@ -172,6 +172,14 @@
   .navbar__links { display: none; }
   .navbar__cta { display: none; }
   .navbar__hamburger { display: flex; }
+
+  /* Force logo and hamburger button to be white on mobile unscrolled homepage (over dark hero image) */
+  .navbar--home:not(.navbar--scrolled) .navbar__logo-comp {
+    filter: brightness(0) invert(1) !important;
+  }
+  .navbar--home:not(.navbar--scrolled) .navbar__hamburger {
+    color: var(--white) !important;
+  }
 }
 
 
@@ -202,4 +210,10 @@
 /* Scrolled navbar — subtle 3D shadow depth */
 .navbar--scrolled {
   box-shadow: 0 10px 40px rgba(0,0,0,0.25), 0 1px 0 rgba(197,168,128,0.2);
+}
+
+@media (max-width: 768px) {
+  .navbar__logo-comp {
+    --logo-height: 48px !important;
+  }
 }

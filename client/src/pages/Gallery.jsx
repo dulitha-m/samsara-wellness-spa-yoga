@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, X } from 'lucide-react';
-import Tilt3D from '../components/Tilt3D';
 import ParticleField from '../components/ParticleField';
 import './Gallery.css';
 
@@ -141,16 +140,14 @@ const Gallery = () => {
                   className="gallery-item"
                   onClick={() => setActiveImage(item)}
                 >
-                  <Tilt3D max={8} scale={1.03} glare className="gallery-tilt">
-                    <div className="gallery-item__img-wrap">
-                      <img src={item.img} alt={item.title} />
-                      <div className="gallery-item__hover">
-                        <Eye size={24} className="gallery-item__icon" />
-                        <h4 className="gallery-item__img-title">{item.title}</h4>
-                        <p className="gallery-item__img-desc">{item.desc}</p>
-                      </div>
+                  <div className="gallery-item__img-wrap">
+                    <img src={item.img} alt={item.title} />
+                    <div className="gallery-item__hover">
+                      <Eye size={24} className="gallery-item__icon" />
+                      <h4 className="gallery-item__img-title">{item.title}</h4>
+                      <p className="gallery-item__img-desc">{item.desc}</p>
                     </div>
-                  </Tilt3D>
+                  </div>
                 </motion.div>
               ))}
             </AnimatePresence>

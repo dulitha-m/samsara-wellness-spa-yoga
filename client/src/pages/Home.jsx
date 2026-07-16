@@ -189,13 +189,13 @@ const Home = () => {
               animate={{ y: [0, -14, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <Tilt3D max={15} scale={1.04} glare>
+              <div className="about__img-float-inner">
                 <img src="/ceylon_spice_ritual_1776336577217.png" alt="Ceylon Spices" className="about__img-small" />
                 <div className="about__badge">
                   <span className="about__badge-num">15+</span>
                   <span className="about__badge-text">Years of<br />Heritage</span>
                 </div>
-              </Tilt3D>
+              </div>
             </motion.div>
           </div>
 
@@ -251,10 +251,10 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: i * 0.12, ease: 'easeOut' }}
             >
-              <Tilt3D max={10} scale={1.05} glare className="stat-card__inner">
+              <div className="stat-card__inner">
                 <span className="stat-card__num">{s.num}</span>
                 <span className="stat-card__label">{s.label}</span>
-              </Tilt3D>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -284,7 +284,7 @@ const Home = () => {
                 transition={{ delay: i * 0.15, duration: 0.8, ease: 'easeOut' }}
                 style={{ perspective: 1000 }}
               >
-                <Tilt3D max={10} scale={1.04} glare className="service-card">
+                <div className="service-card">
                   <div className="service-card__img-wrap">
                     <img src={s.img} alt={s.title} className="service-card__img" />
                     <div className="service-card__overlay" />
@@ -299,7 +299,7 @@ const Home = () => {
                       View Details <ChevronRight size={14} />
                     </Link>
                   </div>
-                </Tilt3D>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -323,13 +323,11 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ duration: 1, ease: 'easeOut' }}
             >
-              <Tilt3D max={8} scale={1.03}>
-                <img
-                  src="/colombo_fort_heritage_1776336554794.png"
-                  alt="Grand Oriental Hotel Colombo Fort"
-                  className="heritage__img-top"
-                />
-              </Tilt3D>
+              <img
+                src="/colombo_fort_heritage_1776336554794.png"
+                alt="Grand Oriental Hotel Colombo Fort"
+                className="heritage__img-top"
+              />
             </motion.div>
             <motion.div
               className="heritage__img-wrap heritage__img-wrap--bottom"
@@ -338,13 +336,11 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
             >
-              <Tilt3D max={8} scale={1.03}>
-                <img
-                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=600&auto=format&fit=crop"
-                  alt="Heritage Interior"
-                  className="heritage__img-bottom"
-                />
-              </Tilt3D>
+              <img
+                src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=600&auto=format&fit=crop"
+                alt="Heritage Interior"
+                className="heritage__img-bottom"
+              />
             </motion.div>
           </div>
 
@@ -393,7 +389,7 @@ const Home = () => {
                 transition={{ delay: i * 0.12, duration: 0.7, ease: 'easeOut' }}
                 style={{ perspective: 800 }}
               >
-                <Tilt3D max={8} scale={1.03} glare className="testimonial-card">
+                <div className="testimonial-card">
                   <div className="testimonial-card__stars">
                     {Array.from({ length: t.rating }).map((_, j) => (
                       <Star key={j} size={14} fill="#C9A84C" color="#C9A84C" />
@@ -407,7 +403,7 @@ const Home = () => {
                       <p className="testimonial-card__country">{t.country}</p>
                     </div>
                   </div>
-                </Tilt3D>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -453,13 +449,13 @@ const Home = () => {
                 transition={{ duration: 0.9, delay: idx * 0.08, ease: 'easeOut' }}
                 style={{ perspective: 800 }}
               >
-                <Tilt3D max={6} scale={1.04} className="bento-tilt">
+                <div className="bento-tilt">
                   <img src={item.img} alt={item.title} />
                   <div className="bento-overlay">
                     <p>{item.category}</p>
                     <h4>{item.title}</h4>
                   </div>
-                </Tilt3D>
+                </div>
               </motion.div>
             ))}
           </div>

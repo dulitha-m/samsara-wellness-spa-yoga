@@ -23,16 +23,14 @@ const Navbar = () => {
     { name: 'Yoga',     path: '/yoga' },
     { name: 'Heritage', path: '/heritage' },
     { name: 'Gallery',  path: '/gallery' },
-    { name: 'Reviews',  path: '/reviews' },
-    { name: 'Blog',     path: '/blog' },
   ];
 
   // Logo variant logic:
-  // - Scrolled (any page)          → cream bg  → dark text + gold lotus
+  // - Scrolled (any page)          → dark glass bg → light (white) text + gold lotus
   // - Home transparent             → cream bg  → dark text + gold lotus
   // - Other pages transparent      → dark img  → light (white) text + gold lotus
   const logoVariant =
-    isScrolled || isHomePage ? 'dark' : 'light';
+    isScrolled ? 'light' : (isHomePage ? 'dark' : 'light');
 
   const menuVariants = {
     closed: { opacity: 0, scale: 1.05, transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] } },
@@ -57,10 +55,11 @@ const Navbar = () => {
             <SamsaraLogo
               variant={logoVariant}
               layout="horizontal"
-              height={44}
+              height={88}
               className="navbar__logo-comp"
             />
           </Link>
+
 
           {/* Desktop links */}
           <ul className="navbar__links">
@@ -104,7 +103,7 @@ const Navbar = () => {
               <SamsaraLogo
                 variant="light"
                 layout="stacked"
-                height={52}
+                height={110}
               />
             </motion.div>
 

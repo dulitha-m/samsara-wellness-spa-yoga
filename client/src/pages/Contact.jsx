@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-import Tilt3D from '../components/Tilt3D';
 import ParticleField from '../components/ParticleField';
 import './Contact.css';
 
@@ -71,7 +70,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: 40, rotateY: -10 }} whileInView={{ opacity: 1, x: 0, rotateY: 0 }} viewport={{ once: true }} transition={{ duration: 0.9 }}
               style={{ perspective: 900 }}
             >
-              <Tilt3D max={8} scale={1.02} glare style={{ borderRadius: 'var(--radius-lg)' }}>
+              <div className="concierge-card__inner" style={{ borderRadius: 'var(--radius-lg)', padding: '2.5rem' }}>
                 <div className="concierge-card__header">
                   <h3>Wellness Concierge</h3>
                   <p>Connect with our hosts for direct support, instant availability, and personalized ritual curation.</p>
@@ -92,7 +91,7 @@ const Contact = () => {
                 <div className="concierge-card__footer">
                   <p>Our concierge is available during spa hours to assist with arrivals and group bookings.</p>
                 </div>
-              </Tilt3D>
+              </div>
             </motion.div>
 
           </div>

@@ -69,10 +69,10 @@ const Heritage = () => {
                   style={{ perspective: 800 }}
                 >
                   <div className="timeline-year">{item.year}</div>
-                  <Tilt3D max={8} scale={1.03} className="timeline-content glass">
+                  <div className="timeline-content glass">
                     <h3>{item.title}</h3>
                     <p>{item.text}</p>
-                  </Tilt3D>
+                  </div>
                 </motion.div>
               ))}
            </div>

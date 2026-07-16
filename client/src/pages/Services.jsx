@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, ChevronRight } from 'lucide-react';
-import Tilt3D from '../components/Tilt3D';
 import ParticleField from '../components/ParticleField';
 import './Services.css';
 
@@ -73,7 +72,7 @@ const Services = () => {
                 
                 {/* Category Info (Sticky) */}
                 <motion.div 
-                  className="service-category__info"
+                   className="service-category__info"
                   initial={{ opacity: 0, x: catIndex % 2 === 0 ? -40 : 40 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
@@ -82,9 +81,7 @@ const Services = () => {
                   <div className="service-category__info-inner">
                     <h2 className="service-category__title">{category.name}</h2>
                     <p className="service-category__desc">{category.desc}</p>
-                    <Tilt3D max={8} scale={1.03} glare>
-                      <img src={category.img} alt={category.name} className="service-category__img" />
-                    </Tilt3D>
+                    <img src={category.img} alt={category.name} className="service-category__img" />
                   </div>
                 </motion.div>
 

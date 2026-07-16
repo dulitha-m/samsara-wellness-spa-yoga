@@ -10,11 +10,11 @@
 }
 
 .navbar--scrolled {
-  background: rgba(250, 246, 239, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 16px 0;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+  background: rgba(18, 17, 16, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 12px 0;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25), 0 1px 0 rgba(197,168,128,0.2);
 }
 
 .navbar__inner {
@@ -70,7 +70,7 @@
   transition: var(--transition);
   color: var(--white);
 }
-.navbar--scrolled .navbar__link { color: var(--text-dark); }
+.navbar--scrolled .navbar__link { color: var(--white); }
 .navbar--home:not(.navbar--scrolled) .navbar__link { color: var(--text-dark); }
 .navbar__link::after {
   content: '';
@@ -113,7 +113,7 @@
   cursor: pointer;
   padding: 4px;
 }
-.navbar--scrolled .navbar__hamburger { color: var(--text-dark); }
+.navbar--scrolled .navbar__hamburger { color: var(--white); }
 .navbar--home:not(.navbar--scrolled) .navbar__hamburger { color: var(--text-dark); }
 
 /* Mobile Menu */
@@ -201,5 +201,5 @@
 
 /* Scrolled navbar — subtle 3D shadow depth */
 .navbar--scrolled {
-  box-shadow: 0 4px 30px rgba(0,0,0,0.08), 0 1px 0 rgba(197,168,128,0.1);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25), 0 1px 0 rgba(197,168,128,0.2);
 }

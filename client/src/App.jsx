@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
+import BackToTop from './components/BackToTop';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -9,15 +10,14 @@ import Yoga from './pages/Yoga';
 import Heritage from './pages/Heritage';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
-import Reviews from './pages/Reviews';
-import Blog from './pages/Blog';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <Navbar />
       <div className="app-wrapper">
-        <Navbar />
+        <BackToTop />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -25,8 +25,6 @@ function App() {
             <Route path="/yoga" element={<Yoga />} />
             <Route path="/heritage" element={<Heritage />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/reviews" element={<Reviews />} />
-            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="footer__col footer__brand-col">
           <Link to="/" className="footer__brand">
             {/* Stacked logo — light variant on dark footer */}
-            <SamsaraLogo variant="light" layout="stacked" height={48} />
+            <SamsaraLogo variant="light" layout="stacked" height={110} />
           </Link>
           <p className="footer__brand-desc">
             A sanctuary designed to restore balance and harmony in the heart of Colombo's heritage.
@@ -50,8 +50,6 @@ const Footer = () => {
             <li><Link to="/yoga">Yoga Classes</Link></li>
             <li><Link to="/heritage">Our Heritage</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/reviews">Reviews</Link></li>
-            <li><Link to="/blog">Blog Journal</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>

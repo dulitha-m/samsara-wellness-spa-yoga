@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock } from 'lucide-react';
-import Tilt3D from '../components/Tilt3D';
 import ParticleField from '../components/ParticleField';
 import './Yoga.css';
 
@@ -46,7 +45,7 @@ const Yoga = () => {
                 transition={{ delay: i * 0.12, duration: 0.7, ease: 'easeOut' }}
                 style={{ perspective: 800 }}
               >
-                <Tilt3D max={10} scale={1.04} glare className="yoga-card">
+                <div className="yoga-card">
                   <div className="yoga-card__top">
                     <h3>{cls.title}</h3>
                     <span className="yoga-card__level">{cls.level}</span>
@@ -55,7 +54,7 @@ const Yoga = () => {
                     <Clock size={16} /> <span>{cls.duration} | {cls.time}</span>
                   </div>
                   <p className="yoga-card__desc">{cls.desc}</p>
-                </Tilt3D>
+                </div>
               </motion.div>
             ))}
           </div>

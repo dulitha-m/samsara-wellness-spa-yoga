@@ -439,10 +439,13 @@
   overflow: hidden;
   transition: var(--transition);
   border: 1px solid rgba(255,255,255,0.05);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) translateZ(0);
   border-color: var(--gold);
   box-shadow: var(--shadow-gold);
 }
@@ -451,11 +454,18 @@
   position: relative;
   height: 250px;
   overflow: hidden;
+  background-color: var(--dark-2);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .service-card__img {
   height: 100%;
   transition: transform 0.8s ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .service-card:hover .service-card__img {
@@ -464,7 +474,10 @@
 
 .service-card__overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -1px;
   background: linear-gradient(to top, var(--dark-2) 0%, transparent 100%);
 }
 
@@ -487,6 +500,8 @@
   position: relative;
   z-index: 2;
   margin-top: -30px;
+  background: var(--dark-2);
+  border-radius: 0 0 6px 6px;
 }
 
 .service-card__top {

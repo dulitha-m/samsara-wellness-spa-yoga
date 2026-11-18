@@ -87,7 +87,11 @@ const Footer = () => {
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
           <p>&copy; {new Date().getFullYear()} Samsara Wellness Spa & Yoga. All Rights Reserved.</p>
-          <p className="footer__designer">Designed by DuBaTech Solutions</p>
+          <p className="footer__designer">
+            <a href="https://www.devexion.com/" target="_blank" rel="noopener noreferrer">
+              Designed by Devexion
+            </a>
+          </p>
         </div>
       </div>
     </footer>
